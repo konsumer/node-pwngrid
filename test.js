@@ -39,6 +39,8 @@ const testId = 'nodejs@b28c94b2195c8ed259f0b415aaee3f39b0b2920a4537611499fa04495
 
 const pwngrid = new PwnGrid(testKey)
 
+let testmessage
+
 test('should have private/public key', async () => {
   assert(pwngrid.privateKey)
   assert(pwngrid.publicKey)
@@ -62,13 +64,14 @@ test('should be able to get units by country', async () => {
   assert.ok(r.length)
 })
 
-// test('should be able to enroll', async () => {
-//   const token = await pwngrid.enroll()
-//   console.log(token)
-// })
+test('should be able to enroll', async () => {
+  const token = await pwngrid.enroll()
+  console.log(token)
+})
 
 // test('should be able to send message', async () => {
-//   const r = await pwngrid.send(testId.split('@').pop(), 'Hi from unit-test')
+//   testmessage = `Unit test at ${new Date()}`
+//   const r = await pwngrid.send(testId.split('@').pop(), testmessage)
 //   assert.ok(r)
 // })
 
