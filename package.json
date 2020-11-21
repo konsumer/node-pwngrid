@@ -1,7 +1,7 @@
 {
-  "name": "node-pwngrid",
+  "name": "pwngrid",
   "version": "0.0.0",
-  "description": "",
+  "description": "Interact with pwnagotchi's grid",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
